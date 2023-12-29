@@ -11,11 +11,6 @@ import {AppRoutingModule} from "./app-routing.module";
 import {RouterModule, Routes} from "@angular/router";
 import {KeycloakAngularModule, KeycloakService} from "keycloak-angular";
 import {AuthGuard} from "./guards/auth.guard";
-const routes: Routes = [
-  { path: 'ressources', component: RessourcesComponent },
-  { path: 'personnes', component: PersonnesComponent , canActivate:[AuthGuard], data : { roles:['USER'] }},
-  { path: 'reservations', component: ReservationsComponent },
-];
 
 
 function initializeKeycloak(keycloak: KeycloakService) {
@@ -45,7 +40,7 @@ function initializeKeycloak(keycloak: KeycloakService) {
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(routes),
+    //RouterModule.forRoot(routes),
     KeycloakAngularModule
 
   ],
