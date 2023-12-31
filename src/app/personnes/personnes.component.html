@@ -1,0 +1,23 @@
+<div class="p-5">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Email</th>
+      <th>Fonction</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let p of personnes">
+      <td>{{p.id}}</td>
+      <td>{{p.nom}}</td>
+      <td>{{p.email}}</td>
+      <td>{{p.fonction}}</td>
+      <td>
+        <button class="btn btn-success" (click)="getReservations(p)">Voir Réservations</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
